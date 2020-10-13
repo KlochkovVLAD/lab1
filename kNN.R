@@ -3,8 +3,9 @@ distance <- function(u, v){
 }
 
 sort <- function(set, point){
-  dist <- matrix(NA,150,2)
-  for(i in 1:150){
+  n <- dim(iris)[1]
+  dist <- matrix(NA,n,2)
+  for(i in 1:n){
     dist[i,1] <- i
     dist[i,2] <- distance(set[i,1:2],point)
   }
@@ -21,15 +22,16 @@ kNN <- function(orderedSet,k){
   
 
 loo <- function(){
-  arrayOfErrors <- matrix(0,149,1)
-  for(i in seq (1,150,1)){
+  n <- dim(iris)[1]
+  arrayOfErrors <- matrix(0,n-1,1)
+  for(i in seq (1,n,1)){
     
     set <- iris[ ,3:5]
     point <- set[i,1:2]
     set <- set[-i,]
     set <- sort(set,point)
     
-    for(k in seq(1,149,1)){
+    for(k in seq(1,n-1,1)){
       class <-kNN(set,k)
       if(class != iris[i,5]){
         arrayOfErrors[k] <- arrayOfErrors[k] + 1
@@ -37,7 +39,7 @@ loo <- function(){
       
     }
   }
-  res <- which.min(arrayOfErrors[1:149])
+  res <- which.min(arrayOfErrors[1:n-1])
   return(res)
 }
 
