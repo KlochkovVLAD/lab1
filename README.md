@@ -59,4 +59,7 @@
 Карта классификации для kwNN, при k=6, q=0.56:
 ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/kwNN.png)
 
+Вероятности ошибок каждого из алгоритмов на данной выборке можно увидеть здесь:
+![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/tableOfErrors.png)
+
 Примеры всех кодов можно посмотреть в репозитории.
