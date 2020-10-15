@@ -100,8 +100,46 @@
  
  Прямоугольное ядро:
  
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/rect.png)
  
  
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/LOORECT.png)
+ 
+ Треугольное ядро:
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/triangle.png)
+ 
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/LOOTriangle.png)
+ 
+ Квадратическое ядро:
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/square.png)
+ 
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/LOORECT.png)
+ 
+ Ядро Епанечникова:
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/ep.png)
+ 
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/LOOEP.png)
+ 
+ Гауссовское ядро:
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/gauss.png)
+ 
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/LOOG.png)
+ 
+ Так же таблица с параметрами и вероятностью ошибки для всех видов ядер:
+ 
+ ![screenshot of sample](https://github.com/KlochkovVLAD/lab1/blob/main/tableOfErrors2.png)
+ 
+ Как можно увидеть по таблице, на данной выборке лучше всего себя показывает Треугольное ядро, при котором алгоритм совершает ошибку с вероятностью 0.033.
+ 
+ В сравнении с алгоритм kwNN, рассмотренным ранее, метод парзеновского окна работает лучше из-за того, что он учитывает расстояние до классифицируемой точки, а не просто индекс точек. Тем самым, если две точки находятся на одинаковом расстоянии от классифицируемой, то они будут иметь одинаковый вес. В алгоритме kwNN, вес одной из них был бы больше.
  
  
 
